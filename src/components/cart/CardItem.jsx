@@ -4,12 +4,13 @@ import axios from 'axios'
 
 const CardItem = (props) => {
 
+
   const onAddOverlay = async (obj)=>{
     try{
-      const findOverlay = props.overlayItems.find(objOver => objOver.myId === obj.myId)
+      const findOverlay = props.overlayItems.find(objOver=> objOver.myId === obj.myId)
       if(findOverlay){
         axios.delete(`https://637f91ca2f8f56e28e904e7d.mockapi.io/cart/${findOverlay.id}`)
-        props.setOverlayItems((over)=> over.filter(o=>o.myId !== obj.myId))
+        props.setOverlayItems((over) => over.filter(o=>o.myId !== obj.myId))
       }
       else{
         const {data} = await axios.post('https://637f91ca2f8f56e28e904e7d.mockapi.io/cart', obj)
@@ -23,10 +24,10 @@ const CardItem = (props) => {
 
   const onAddFav = async (obj)=>{
     try{
-      const findFavorites = props.favorites.find(objFav => objFav.myId === obj.myId)
+      const findFavorites = props.favorites.find(objFav=> objFav.myId === obj.myId)
       if(findFavorites){
         axios.delete(`https://637f91ca2f8f56e28e904e7d.mockapi.io/favorites/${findFavorites.id}`)
-        props.setFavorites((over)=> over.filter(o=>o.myId !== obj.myId))
+        props.setFavorites((over) => over.filter(o=>o.myId !== obj.myId))
       }
       else{
         const {data} = await axios.post('https://637f91ca2f8f56e28e904e7d.mockapi.io/favorites', obj)
@@ -39,38 +40,35 @@ const CardItem = (props) => {
   }
 
   return (
-    <div>
-    {
+<div className='conteiner py-3'>
+  
+    { 
       props.item.map(obj=>{
         return(
-          <Item
-          key={obj.id}
-          id={obj.id}
-          myId={obj.myId}
-          title={obj.title}
-          description={obj.description}
-          price={obj.price}
-          img={obj.img}
+           <Item
+           key={obj.id}
+           id={obj.id}
+           myId={obj.myId}
+           title={obj.title}
+           description={obj.description}
+           price={obj.price}
+           img={obj.img}
 
-          favBtn={
+           favBtn={
             (favObj)=>{
               onAddFav(favObj)
             }
-          }
+           }
 
-          onPlus={(cartObj)=>{
+           onPlus={(cartObj)=>{
             onAddOverlay(cartObj)
-          }}
-          />
+           }}
+           />
         )
-      })   
+      })
     }
-    </div>
-    )
-     
-  }
-
-   
- 
+  </div>
+  )
+}
 
 export default CardItem

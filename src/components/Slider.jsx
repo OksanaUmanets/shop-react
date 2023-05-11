@@ -14,8 +14,8 @@ const Slider = () => {
         alt="First slide"
       />
       <Carousel.Caption>
-        <h3>First slide label</h3>
-        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        <h3>Книги источник знаний</h3>
+        <p>Люди перестают мыслить, когда перестают читать</p>
           <Link exact to={'/form'}>
             <Button variant="primary">
               Обратная связь

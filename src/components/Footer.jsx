@@ -10,32 +10,32 @@ const Footer = () => {
             </img>
           </a>
           <p>
-            A&B - надежный друг
+            Книги - надежный друг
           </p>
         </div>
         <div className='col mb-3'>
 
         </div>
         <div className='col mb-4'>
-          <h5>Колонка 1</h5>
+          <h5>Мы в соцсетях:</h5>
           <ul className='nav flex-column'>
             <li className='nav-item mb-3'>
-              <a className='nav-link p-0 text-muted'> Надписи</a>
+              <a className='nav-link p-0 text-muted'> Telegram</a>
             </li>
             <li className='nav-item mb-3'>
-              <a className='nav-link p-0 text-muted'> Надписи</a>
+              <a className='nav-link p-0 text-muted'>YouTube</a>
             </li>
           </ul>
         </div>
 
         <div className='col mb-4'>
-          <h5>Колонка 2</h5>
+          <h5>Наши магазины:</h5>
           <ul className='nav flex-column'>
             <li className='nav-item mb-3'>
-              <a className='nav-link p-0 text-muted'> Надписи</a>
+              <a className='nav-link p-0 text-muted'>г. Иркутск, ул. Советская, д.23</a>
             </li>
             <li className='nav-item mb-3'>
-              <a className='nav-link p-0 text-muted'> Надписи</a>
+              <a className='nav-link p-0 text-muted'>г. Красноярск, ул. Ленина, д. 54</a>
             </li>
           </ul>
         </div>

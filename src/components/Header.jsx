@@ -11,7 +11,7 @@ const Header = () => {
     <div>
          <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand> <Link to={'/'}>Название магазина</Link></Navbar.Brand>
+          <Navbar.Brand> <Link to={'/'}>Книжная магия</Link></Navbar.Brand>
           <Nav className="me-auto">
             <Nav.Link><Link to={'/'}>Главная</Link></Nav.Link>
             <Nav.Link><Link to={'/favorites'}>Избранное</Link></Nav.Link>
